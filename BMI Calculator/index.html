@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BMI CALCULATOR</title>
+</head>
+
+<style>
+     #lbl{
+       position: absolute;
+       top: 5%;
+       color: red;
+       font-size: 32px;
+   }
+</style>
+  
+<script>
+    function BMI () 
+    {
+
+     var w = document.getElementById("w").value;
+     var h = document.getElementById("h").value;
+
+     var bmi = w/(h/100*h/100);
+
+     document.getElementById("resultat").innerHTML = "Your BMI is" + bmi;
+    }
+</script>
+
+<body bgcolor="lightblue"> 
+    <p id="lbl">HTML BMI CALCULATOR</p>
+    <br><br><br><br><br>
+Enter your weight: <input type="text" id="w"></input>
+<br><br>
+Enter your height: <input type="text" id="h"></input>
+<br><br><br>
+<p id="resultat"></p>
+<button id="btn" onclick="BMI ()">CLICK TO CALCULATOR</button>
+</body>
+
+</html>
